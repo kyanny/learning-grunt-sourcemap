@@ -11,3 +11,10 @@ How to run:
 
     $ grunt        # <-- run default task
     $ grunt clean  # <-- cleanup temporary working directories/files
+
+Confirm how it works:
+
+    $ ruby -run -e httpd public -p 8080
+    $ open http://localhost:8080/
+
+Then open Developer Tools of Browser, enable source map, open source tab, open `all.js`
