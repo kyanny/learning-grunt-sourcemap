@@ -1,4 +1,2 @@
-src/js/
-build/
-release/
+public/js/
 node_modules
