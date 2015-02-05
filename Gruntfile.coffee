@@ -5,29 +5,28 @@ module.exports = (grunt) ->
         options:
           sourceMap: true
         files:
-          'src/js/app.js': 'src/coffee/app.coffee'
-          'src/js/lib.js': 'src/coffee/lib.coffee'
+          'public/js/app.js': 'public/coffee/app.coffee'
+          'public/js/lib.js': 'public/coffee/lib.coffee'
 
     concat:
       options:
         sourceMap: true
       dist:
         src: [
-          'src/js/app.js',
-          'src/js/lib.js'
+          'public/js/app.js',
+          'public/js/lib.js'
         ]
-        dest: 'build/all.js'
+        dest: 'public/js/all.js'
 
     uglify:
       options:
         sourceMap: true
       my_target:
         files:
-          'release/all.min.js': ['build/all.js']
+          'public/js/all.min.js': ['public/js/all.js']
 
     clean:
-      build: ['build'],
-      release: ['release']
+      ['public/js/*']
 
   grunt.registerTask 'default', [
     'coffee:compile',
